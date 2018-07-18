@@ -24,6 +24,7 @@ class ReportsController < ApplicationController
   # POST /reports
   # POST /reports.json
   def create
+    ReportExampleJob.perform_later
     @report = Report.new(report_params)
 
     respond_to do |format|
