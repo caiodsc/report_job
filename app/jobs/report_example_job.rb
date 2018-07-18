@@ -3,7 +3,7 @@ class ReportExampleJob < ApplicationJob
 
   def perform(*args)
     # Do something later
-    sleep 8
+    sleep 10
     puts "Hello job"
   end
 end
